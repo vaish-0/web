@@ -12,9 +12,9 @@ RUN yarn install
 RUN yarn build
 RUN yarn start
 # Build step #2: build an nginx container
-FROM nginx:stable-alpine
-COPY --from=build-step /app/build /usr/share/nginx/html
-COPY deployment/nginx.default.conf /etc/nginx/conf.d/default.conf
+#FROM nginx:stable-alpine
+#COPY --from=build-step /app/build /usr/share/nginx/html
+#COPY deployment/nginx.default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 3000
 EXPOSE 80
